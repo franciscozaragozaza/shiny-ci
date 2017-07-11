@@ -5,7 +5,6 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 
-
 gulp.task('serve', ['sass'], function () {
 	browserSync.init({
 		server: "./app"
@@ -23,7 +22,7 @@ gulp.task('minjs', function () {
 		.pipe(uglify())
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.stream());
-})
+});
 
 gulp.task('sass', function () {
 	return gulp.src('scss/**/*.scss')
