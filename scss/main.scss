@@ -1,5 +1,6 @@
-$color-fondo: white;
+@import "colores";
+$color-fondo: green;
 
 body{
-    background-color: $color-fondo;
+    background-color: $secondary;
 }
