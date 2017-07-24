@@ -3655,7 +3655,7 @@ tbody.collapse.in {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
-  border: 1px solid transparent; }
+  border: 5px solid transparent; }
   .navbar:before, .navbar:after {
     content: " ";
     display: table; }
@@ -5828,4 +5828,5 @@ div {
 
 p {
   color: darkgreen;
-  text-align: left; }
+  text-align: left;
+  margin: 50px; }

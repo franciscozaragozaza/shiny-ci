@@ -1,11 +1,24 @@
 extends head-layout.pug
 block body-layout
- body
-   .container
-     block content
-   script(src='/js/script.min.js')
-   #container.panel-footer.navbar-fixed-bottom
-      p.text-center
-        #button-menu.btn-group
-          a.btn.btn-primary(href='/index.html') Inicio 
-          a.btn.btn-primary(href='/about.html') Acerca de
+  body
+    .dropdown
+      button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='drop1') DropdownMenu
+        span.caret
+      .drop1
+      ul.dropdown-menu
+        li
+          a(href="/index.html") Index
+      button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown') SecondMenu
+        span.caret
+      ul.dropdown-menu
+        li
+          a(href="/about.html") About
+
+    block content
+
+    script(src='/js/script.min.js')
+    #container.panel-footer.navbar-fixed-bottom
+        p.text-center
+          #button-menu.btn-group
+            a.btn.btn-primary(href='/index.html') Inicio 
+            a.btn.btn-primary(href='/about.html') Acerca de

@@ -3,10 +3,21 @@
   <head>
     <title>Pug</title>
     <link href="/css/main.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 </html>
 <body>
-  <div class="container">
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="drop1">DropdownMenu<span class="caret"></span></button>
+    <div class="drop1"></div>
+    <ul class="dropdown-menu">
+      <li><a href="/index.html">Index</a></li>
+    </ul>
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SecondMenu<span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="/about.html">About</a></li>
+    </ul>
   </div>
   <script src="/js/script.min.js"></script>
   <div class="panel-footer navbar-fixed-bottom" id="container">
