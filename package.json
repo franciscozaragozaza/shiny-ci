@@ -9,7 +9,9 @@
   "author": "Franciscozaragozaza",
   "license": "ISC",
   "dependencies": {
-    "gulp-sass": "^3.1.0"
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "pug": "^2.0.0-rc.2"
   },
   "devDependencies": {
     "browser-sync": "^2.18.12",

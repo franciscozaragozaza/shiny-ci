@@ -1,0 +1,11 @@
+extends head-layout.pug
+block body-layout
+ body
+   .container
+     block content
+   script(src='/js/script.min.js')
+   #container.panel-footer.navbar-fixed-bottom
+      p.text-center
+        #button-menu.btn-group
+          a.btn.btn-primary(href='/index.html') Inicio 
+          a.btn.btn-primary(href='/about.html') Acerca de

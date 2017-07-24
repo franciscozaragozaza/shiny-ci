@@ -1,6 +1,19 @@
 @import "colores";
-$color-fondo: green;
+@import "_bootstrap.scss";
 
 body{
-    background-color: $secondary;
+    background-color: $background;
+}
+h1{
+    text-align: center;
+    font-size: 35px;
+}
+div{
+    color: $div;
+    text-align: center;
+    font-size: 25px;
+}
+p{
+    color: $paragraph;
+    text-align: left;
 }

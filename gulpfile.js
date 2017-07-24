@@ -4,6 +4,7 @@ var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var pug = require('gulp-pug');
 
 gulp.task('serve', ['sass'], function () {
 	browserSync.init({
@@ -11,6 +12,7 @@ gulp.task('serve', ['sass'], function () {
 	});
 	gulp.watch('scripts/*.js', ['minjs']);
 	gulp.watch('scss/**/*.scss', ['sass']);
+	gulp.watch('viewspug/*.pug', ['views']);
 	gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
@@ -31,6 +33,11 @@ gulp.task('sass', function () {
 		.pipe(browserSync.stream());
 });
 
-gulp.task('watch', function () {
-	gulp.watch('scss/**/*.scss', ['sass']);
+gulp.task('views', function buildHTML(){
+	return gulp.src('viewspug/*.pug')
+	.pipe(pug({
+		pretty: 1
+	}))
+	.pipe(gulp.dest('app'))
+	.pipe(browserSync.stream());
 });
